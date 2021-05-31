@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CanastApp</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span>CanastApp</span>
+  </header>
+  <section class="espacios pantallaVacia" id="pantallaVacia">
+      <h1 class="pantallaVacia__texto">No tienes elementos en la canasta para comprar</h1>
+      <h1 class="pantallaVacia__icon">📜</h1>
+  </section>
+  <section class="pantallaDetalle" id="pantallaDetalle">
+    <img src="media/galleta.svg" alt="" class="pantallaDetalle__icono" id="pantallaDetalle__icono">
+    <h1 id="pantallaDetalle__producto">pantalla de detalle</h1>
+    <p id="pantallaDetalle__descripcion">Descripcion del roducto. Escribi con p producto rata.</p>
+    <button class="botonAtras" id="botonAtras">
+      Atras
+    </button>
+  </section>
+  <section class="pantallaListado" id="pantallaListado">
+    <ul class="list-group" id="pantallaListado__ul"></ul>
+  </section>
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary botonAdd" data-bs-toggle="modal" data-bs-target="#pantallaAgregar__modal" id="botonAdd">
+  Agregar
+</button>
+<!-- Modal -->
+<div class="modal fade" id="pantallaAgregar__modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Productos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="PantallaAgregar__InputProd" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="PantallaAgregar__InputProd">
+        </div>
+        <div class="mb-3">
+          <label for="pantallaAgregar__tipoProd" class="form-label">Tipo de Producto</label>
+          <select id="pantallaAgregar__tipoProd" class="form-select">
+            <option value="media/caja.svg">Varios</option>
+            <option value="media/filete.svg">Carnes</option>
+            <option value="media/pimienta.svg">Verduras</option>
+            <option value="media/leche.svg">Lacteos</option>
+            <option value="media/vaso-de-agua.svg">Bebidas</option>
+            <option value="media/rociar.svg">Limpieza</option>
+            <option value="media/galleta.svg">Aperitivos</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="pantallaAgregar__detalleProd" class="form-label">Detalle</label>
+          <textarea class="form-control" id="pantallaAgregar__detalleProd" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-primary" id="btn_agregar">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<script src="scripts/main.js"></script>
+
+</body>
+</html>
